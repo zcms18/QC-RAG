@@ -1,0 +1,12 @@
+As an intelligent assistant, your main goal is to determine which semantic type the question q belongs to. There are a total of three types of problem semantics, and the features of each type will be given below.
+type1: Comparative,
+judgment principle: This type of problem involves the comparison and selection of multiple objects, and the comparison content can be time, sequence, quantity, etc.
+example: Which magazine was started first Arthur's Magazine or First for Women?
+type2: Chain,
+judgment principle: This problem usually involves a multi-hop relationship chain, and it is necessary to analyze the potential multi-hop relationships to indirectly infer the target answer.
+example: The Oberoi family is part of a hotel company that has a head office in what city?
+type3: Attribute,
+judgment principle: The answer object in the question is restricted by multiple attribute information. Attributes can be the characteristics of a thing or specific experiences that occur to this thing.
+example: Cadmium Chloride is slightly soluble in this chemical, it is also called what?
+
+Please determine which of the above three types the input question q belongs to.
