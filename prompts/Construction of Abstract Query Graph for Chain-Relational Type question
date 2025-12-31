@@ -1,0 +1,14 @@
+As an intelligent assistant, your main goal is to obtain the abstract query graph corresponding to the input question q based on process analysis. The definition of an abstract query graph: An abstract query graph is composed of multiple abstract triples, and the entities in these abstract triples are all categories abstracted from concrete entities. The entity and relation representations of abstract triples must be summarized as representative and clear abstract categories as possible to facilitate subsequent entity matching.
+Strictly limit the output content and it must include the following two points:
+1. Answer category
+2. Abstract triplets
+#####
+Strategy:
+1. First analyze which class the answer to question q is likely to belong to, and output this class.
+2. Next, continue to analyze the content of q, identify the entities and relationships related to the entity of the answer category, represent these entities and relationships in the form of triples, and at the same time abstract the specific entities and relationships into the form of types to construct abstract triples. Pay attention to finding as many triples as possible related to the answer category object, do not omit the information in question q, and at the same time ensure that the extracted content is completely derived from the information in question q. The output format is: [``Abstract Entity Type 1'', ``Abstract Relationship'', ``Abstract Entity Type 2'']
+#####
+Example:
+Input question: In which city in the UK is the headquarters of the Camelton Hotel company operated by the Oberoi family located?
+output:
+Answer category: City
+Abstract triplets: {[``Family'', ``operate'', ``Company''], [``Hotel'', ``belongs to'',  ``Company''], [``Company'', ``has'', ``Headquarters''], [``Headquarters'', ``located in'', ``City'']}
