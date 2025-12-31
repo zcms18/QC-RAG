@@ -1,0 +1,14 @@
+As an intelligent assistant, your main goal is to obtain the attribute constraint triplet corresponding to the input question q based on process analysis.
+Strictly limit the output content and it must include the following two points:
+1. Answer category
+2. Attribute-restricted triples
+#####
+Strategy:
+1. First analyze which class the answer to question q is likely to belong to, and output this class.
+2. Next, continue to analyze the content information in q, identify the entities and relationships related to the answer category, and represent them in the form of triples. Among them, these entities must be the characteristics of the answer category or the descriptions of the experienced events. At the same time, when extracting these attribute information, it is required to be as comprehensive and sufficient as possible, and summarize them into entity nodes related to the answer category. The output format is: [``Answer Category'', ``Relationship'', ``Attribute Information'']
+#####
+Example:
+Input question: What is the name of the Australian specialist electronic music magazine that features avant-rock,  experimental sound art, and experimental hip hop?
+Output: 
+Answer category: Magazine
+Attribute-restricted triples:{[``Magazine'', ``origin'', ``Australian''], [``Magazine'', ``focus on genre'', ``specialist electronic music''], [``Magazine'', ``features'', ``experimental hip hop''], [``Magazine'', ``features'', ``avant-rock''], [``Magazine'', ``features'', ``experimental sound art'']}
