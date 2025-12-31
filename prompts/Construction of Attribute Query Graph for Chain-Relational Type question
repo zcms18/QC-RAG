@@ -1,0 +1,16 @@
+We have already known the abstract triples corresponding to problem q. Now, we need to further extract some specific entity values and additional attribute information from problem q to build a detailed understanding of it. It is specifically divided into two aspects: abstract type entity matching and associated attribute extraction.
+#####
+Strategy:
+1. First, perform abstract type entity matching. The main task of this step is to extract the value of the concrete entity corresponding to each abstract type from the question q based on the abstract triples. The output format is: [``Abstract Entity Type'',``Entity Value'']
+2. Analyze each abstract type entity in sequence. Based on the description in question q, extract and summarize the descriptions related to this abstract type mentioned in q, and summarize these descriptions into attribute values. Finally, output each abstract type entity and its corresponding set of attribute values. The output format is: [``Abstract Type Entity'', ``relation'', ``Attribute'']
+
+The specific values extracted from the question sentence q must be entirely based on the information in the question sentence q. It is prohibited to have any content not in the question sentence q, to add additional knowledge, and to conduct self-reasoning.
+#####
+Example:
+Input:
+question: In which city in the UK is the headquarters of the Camelton Hotel company operated by the Oberoi family located?
+Answer category: City
+Abstract triplets: {[``Family'', ``operate'', ``Company''], [``Hotel'', ``belongs to'',  ``Company''], [``Company'', ``has'', ``Headquarters''], [``Headquarters'', ``located in'', ``City'']}
+output:
+Abstract entity values: {[``Family'', ``Oberoi Family''], [``Hotel'', ``Camelton Hotel''], [``Headquarters'', ``the headquarters of the company'']}
+Entity association attribute: {[``City'', ``located in'', ``UK'']}
