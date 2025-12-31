@@ -1,0 +1,15 @@
+As an intelligent assistant, your task is to analyze which objects' information needs to be compared based on the input question q, thereby enhancing your understanding of the question's semantics and facilitating the subsequent answering process.
+Strictly limit the output content and it must include the following three points:
+1. Compare categories.
+2. All comparison objects.
+3. Specific comparison contents.
+
+Strategy:
+1. First, you need to analyze which type of information to compare in order to answer the question and output this category.
+2. Next, continue to analyze the content of the question, further clarify the objects involved in the comparison, that is, all the candidate answer objects, and clarify the specific comparison content of these objects. Summarize them based on your semantic understanding of the questions.
+
+Example:
+Input question: Which magazine was started first Arthur's Magazine or First for Women?
+Output: Compare categories: start-time.
+All the comparison objects: Arthur's Magazine, First for Women.
+Specific comparison contents: Establishment time of the magazine.
